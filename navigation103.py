@@ -78,7 +78,8 @@ def run_multi_point_optimization(graph_file, img_file, points_list):
     
     # Căn chỉnh lại extent để khớp với ảnh (thử thay đổi các số này nếu vẫn lệch)
     # extent=[x_min, x_max, y_min, y_max]
-    myextent = [-1.0, 21.0, -1.0, 15.0]
+    myextent = [-0.0706, 20.7606, 0.0574, 13.7126]   # Cập nhật theo map_visualizing.py
+
     ax.imshow(img, extent=myextent) 
 
     pos = {n: (G.nodes[n]['x'], G.nodes[n]['y']) for n in G.nodes()}

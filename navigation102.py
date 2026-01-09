@@ -62,7 +62,7 @@ def run_optimization(graph_file, img_file, start_node, end_node):
     
     img = mpimg.imread(img_file)
     fig, ax = plt.subplots(figsize=(12, 8))
-    ax.imshow(img, extent=[0, 21, 0, 14]) # Scale extent dựa trên tọa độ trong XML (khoảng 0-21)
+    ax.imshow(img, extent=[-0.0706, 20.7606, 0.0574, 13.7126]) # Cập nhật theo map_visualizing.py
 
     # Vẽ toàn bộ đồ thị (mờ)
     pos = {n: (G.nodes[n]['x'], G.nodes[n]['y']) for n in G.nodes()}
