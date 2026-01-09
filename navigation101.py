@@ -32,8 +32,13 @@ def process_track_graph(file_path, start_node, end_node):
     
     # Chuyển đổi dữ liệu tọa độ sang kiểu số (float)
     for node_id in G.nodes():
-        G.nodes[node_id]['x'] = float(G.nodes[node_id]['d0'])
-        G.nodes[node_id]['y'] = float(G.nodes[node_id]['d1'])
+        x_val = G.nodes[node_id].get('x', G.nodes[node_id].get('d0', 0))
+        y_val = G.nodes[node_id].get('y', G.nodes[node_id].get('d1', 0))
+    
+        G.nodes[node_id]['x'] = float(x_val)
+        G.nodes[node_id]['y'] = float(y_val)
+
+        
 
     # Tham số giả định (Tùy chỉnh theo thực tế robot của bạn)
     V_MAX = 1.0        # Vận tốc tối đa trên đường thẳng (m/s)
