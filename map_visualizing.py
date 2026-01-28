@@ -69,6 +69,6 @@ def visualize_full_graph(graph_file, img_file):
 # --- CHẠY CHƯƠNG TRÌNH ---
 # Đảm bảo tên file đúng với file bạn đang có
 graph_filename = "Competition_track_graph.graphml"
-image_filename = "Competition_track_graph.png"
+image_filename = "Competition_track_graph.jpg"
 
 visualize_full_graph(graph_filename, image_filename)

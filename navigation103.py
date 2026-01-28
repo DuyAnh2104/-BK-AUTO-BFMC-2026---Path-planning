@@ -78,8 +78,8 @@ def run_multi_point_optimization(graph_file, img_file, points_list):
     
     # Căn chỉnh lại extent để khớp với ảnh (thử thay đổi các số này nếu vẫn lệch)
     # extent=[x_min, x_max, y_min, y_max]
-    myextent = [-1.0, 21.0, -1.0, 15.0]
-    ax.imshow(img, extent=myextent) 
+    myextent = [-0.0706, 20.7606, 0.0574, 13.7126]
+    ax.imshow(img, extent=myextent, aspect='auto') 
 
     pos = {n: (G.nodes[n]['x'], G.nodes[n]['y']) for n in G.nodes()}
     
@@ -102,5 +102,5 @@ def run_multi_point_optimization(graph_file, img_file, points_list):
 # --- CHẠY CHƯƠNG TRÌNH ---
 # Định nghĩa danh sách các điểm bạn muốn đi qua tại đây
 time_start= time.time()
-my_waypoints = ["7", "333", "244", "33"] 
+my_waypoints = ["14", "333", "244", "33"] 
 run_multi_point_optimization("Competition_track_graph.graphml", "Competition_track_graph.png", my_waypoints)

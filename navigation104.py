@@ -66,7 +66,7 @@ def run_layered_optimization(graph_file, img_file, points_list):
     if os.path.exists(img_file):
         img = mpimg.imread(img_file)
         # Sử dụng extent bạn đã căn chỉnh
-        myextent = [-1.0, 21.0, -1.0, 15.0]
+        myextent = [-0.0706, 20.7606, 0.0574, 13.7126]
         ax.imshow(img, extent=myextent, aspect='auto')
 
     pos = {n: (G.nodes[n]['x'], G.nodes[n]['y']) for n in G.nodes()}
